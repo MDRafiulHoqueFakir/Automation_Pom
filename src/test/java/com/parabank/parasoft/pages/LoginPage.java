@@ -40,7 +40,7 @@ public class LoginPage extends BasePage {
     }
 
     public boolean hasError() {
-        return getWebElements(By.className("error")).size() > 0;
+        return !getWebElements(By.className("error")).isEmpty();
     }
 
     public HomePage doLogin(String username, String password) {
